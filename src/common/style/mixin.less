@@ -1,0 +1,36 @@
+.w(@w){
+  width:unit(@w/@remSize,rem);
+}
+.h(@h){
+  height:unit(@w/@remSize,rem);
+}
+.top(@t){
+  top:unit(@w/@remSize,rem);
+}
+.left(@l){
+  left:unit(@w/@remSize,rem);
+}
+.bottom(@b){
+  width:unit(@w/@remSize,rem);
+}
+.right(@r){
+  right:unit(@w/@remSize,rem);
+}
+//padding
+.padding(@t,@r,@b,@l){
+  padding-top: unit(@t/@remSize,rem);
+  padding-right: unit(@r/@remSize,rem);
+  padding-bottom: unit(@b/@remSize,rem);
+  padding-left: unit(@l/@remSize,rem);
+}
+//margin
+.margin(@t,@r,@b,@l){
+  margin-top: unit(@t/@remSize,rem);
+  margin-right: unit(@r/@remSize,rem);
+  margin-bottom: unit(@b/@remSize,rem);
+  margin-left: unit(@l/@remSize,rem);
+}
+//ling-height
+.lh(@lh){
+  line-height: unit(@lh/@remSize,rem);
+}
