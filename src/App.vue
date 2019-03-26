@@ -1,16 +1,24 @@
 <template>
   <div id="app">
     <router-view/>
-    <Reg></Reg>
+    <Reset-ps></Reset-ps>
   </div>
 </template>
 
 <script>
-  import Reg from '../src/components/pages/reg/reg.vue'
+  import Reg from '../src/components/pages/reg/reg.vue';
+  import Login from '../src/components/pages/login/login.vue';
+  import ForgetPs from '../src/components/pages/login/forgetPs.vue';
+  import Safety from '../src/components/pages/login/safety.vue';
+  import ResetPs from '../src/components/pages/login/resetPs.vue';
 export default {
   name: 'App',
   components:{
-    Reg
+    Reg,
+    Login,
+    ForgetPs,
+    Safety,
+    ResetPs
   }
 }
 </script>
