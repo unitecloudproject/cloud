@@ -1,12 +1,17 @@
 <template>
   <div id="app">
     <router-view/>
+    <Reg></Reg>
   </div>
 </template>
 
 <script>
+  import Reg from '../src/components/pages/reg/reg.vue'
 export default {
-  name: 'App'
+  name: 'App',
+  components:{
+    Reg
+  }
 }
 </script>
 
