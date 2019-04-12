@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 Vue.use(Vuex);
-import user from './user'
+import user from './user/'
 import aside from './aside'
 import homePage from './homePage'
 import money from './money'

@@ -18,13 +18,6 @@ module.exports = {
           "^/api":""
         }
       },
-    /*  "/reg":{
-        target:"http://39.106.157.48:8000",
-        changeOrigin:true,
-        pathRewrite:{
-          "^/code":""
-        }
-      }*/
     },
 
     // Various Dev Server settings

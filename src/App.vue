@@ -5,6 +5,7 @@
   </div>
 </template>
 
+
 <script>
   import Reg from '../src/components/pages/reg/reg.vue';
   import Login from '../src/components/pages/login/login.vue';
@@ -12,6 +13,7 @@
   import Safety from '../src/components/pages/login/safety.vue';
   import ResetPs from '../src/components/pages/login/resetPs.vue';
   import Header from '../src/components/common/Header.vue'
+  import HomePage from './components/pages/homePage/homePage.vue'
 export default {
   name: 'App',
   components:{
@@ -24,6 +26,8 @@ export default {
   }
 }
 </script>
+
+
 
 <style>
 #app {

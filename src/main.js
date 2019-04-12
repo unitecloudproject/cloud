@@ -10,6 +10,7 @@ import './common/style/reset.css'
 import Mint from 'mint-ui';
 import 'mint-ui/lib/style.css'
 import './common/font/iconfont.css'
+import "./components/common/font/iconfont.css"
 
 Vue.use(Mint);
 Vue.config.productionTip = false
@@ -17,6 +18,7 @@ Vue.prototype.$axios=Axios;
 Vue.use(LazyLoad,{
 
 });
+// Vue.use(MintUI);
 
 /* eslint-disable no-new */
 new Vue({
