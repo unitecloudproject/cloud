@@ -1,7 +1,7 @@
 <template>
   <div id="app">
+    <Header></Header>
     <router-view></router-view>
-    <Login></Login>
   </div>
 </template>
 
@@ -11,6 +11,7 @@
   import ForgetPs from '../src/components/pages/login/forgetPs.vue';
   import Safety from '../src/components/pages/login/safety.vue';
   import ResetPs from '../src/components/pages/login/resetPs.vue';
+  import Header from '../src/components/common/Header.vue'
 export default {
   name: 'App',
   components:{
@@ -18,7 +19,8 @@ export default {
     Login,
     ForgetPs,
     Safety,
-    ResetPs
+    ResetPs,
+    Header
   }
 }
 </script>
