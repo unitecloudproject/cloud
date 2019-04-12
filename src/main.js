@@ -13,6 +13,7 @@ import './common/font/iconfont.css'
 import "./components/common/font/iconfont.css"
 
 Vue.use(Mint);
+import './components/style/tongpei.css'
 Vue.config.productionTip = false
 Vue.prototype.$axios=Axios;
 Vue.use(LazyLoad,{
