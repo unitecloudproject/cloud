@@ -1,22 +1,32 @@
 <template>
   <div id="app">
-    <router-view/>
+    <Header></Header>
+  <router-view></router-view>
+  
+  
   </div>
 </template>
 
 <script>
+import Header from "../src/components/pages/homePage/m-header/header"
+import banner from "../src/components/common/banner/banner"
+import ApiConfig from "../src/common/api/apiconfig.js"
 export default {
-  name: 'App'
+  name: 'App',
+  components:{
+    Header
+  },
+  created(){
+    let url=ApiConfig.bannerApi
+    this.$axios.get(url)
+  .then((data)=>{
+    // console.log(data)
+  })
+  }
+
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
