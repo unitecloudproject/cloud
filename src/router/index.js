@@ -2,6 +2,7 @@ import Vue from 'vue'
 <<<<<<< HEAD
 import Router from 'vue-router'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Login from '../components/pages/login/login.vue'
 import Reg from '../components/pages/reg/reg.vue'
 import ForgetPs from "../components/pages/login/forgetPs.vue"
@@ -155,3 +156,40 @@ const router=new Router({
 })
 >>>>>>> ef3321117060b3025b54058cec39b10c25b3f263
 export default router
+=======
+import QuanBu from '../components/pages/homePage/pages/quanbu.vue'
+import MuJiZhong from '../components/pages/homePage/pages/mujizhong.vue'
+import WeiKaiShi from '../components/pages/homePage/pages/weikaishi.vue'
+import YiJieShu from '../components/pages/homePage/pages/yijieshu.vue'
+Vue.use(Router)
+
+export default new Router({
+    routes: [
+        {
+            path:'/',
+            redirect:'quanbu'
+        },
+        {
+            path: '/quanbu',
+            component: QuanBu,
+            children: []
+        },
+        {
+            path: '/mujizhong',
+            component: MuJiZhong,
+            children: []
+        },
+        {
+            path: '/weikaishi',
+            component: WeiKaiShi,
+            children: []
+        },
+        {
+            path: '/yijieshu',
+            component: YiJieShu,
+            children: []
+        },
+
+    ]
+})
+>>>>>>> b8aa8aa7421c5ba7c7ca586e570ccd804eeb80e3

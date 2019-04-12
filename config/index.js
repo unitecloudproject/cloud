@@ -18,6 +18,11 @@ module.exports = {
           "^/api":""
         }
       },
+      '/qqmusic': { //api暗号
+        target: 'https://c.y.qq.com', // 要转发的目标路径
+        changeOrigin: true, // 改变请求源
+        pathRewrite: { '^/qqmusic': '' } // 路径重新
+    }
     },
 
     // Various Dev Server settings
