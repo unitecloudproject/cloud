@@ -1,0 +1,10 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+li,ol{
+    list-style:none;
+}
+h4{
+    font-size:14px;
+}

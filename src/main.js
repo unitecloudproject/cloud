@@ -6,7 +6,7 @@ import router from './router'
 import Axios from 'axios';
 import LazyLoad from 'vue-lazyload'
 import store from './store'
-
+import './components/style/tongpei.css'
 Vue.config.productionTip = false
 Vue.prototype.$axios=Axios;
 Vue.use(LazyLoad,{
