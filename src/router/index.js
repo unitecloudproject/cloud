@@ -5,6 +5,7 @@ import ForgetPs from "../components/pages/login/forgetPs.vue"
 import ResetPs from '../components/pages/login/resetPs.vue'
 import Safety from '../components/pages/login/safety.vue'
 import QuanBu from '../components/pages/homePage/pages/quanbu.vue'
+import HomePage from '../components/pages/homePage/pages/homePage.vue'
 import MuJiZhong from '../components/pages/homePage/pages/mujizhong.vue'
 import WeiKaiShi from '../components/pages/homePage/pages/weikaishi.vue'
 import YiJieShu from '../components/pages/homePage/pages/yijieshu.vue'

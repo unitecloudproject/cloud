@@ -1,6 +1,7 @@
 <template>
     <div class="consent">
-    <ul>
+      <Tab></Tab>
+    <ul class="firstUl">
         <div class="logo">
          <img src="../../../../../static/img/logo-01.png" alt="">
       </div>
@@ -35,6 +36,7 @@
     </div>
 </template>
 <script>
+  import Tab from '@/components/common/tab/tab.vue'
 import BScroll from 'better-scroll'
 export default {
     data(){
@@ -46,6 +48,9 @@ export default {
            ]
        }
     },
+  components:{
+      Tab
+  },
     methods:{
         scroll(){
          new BScroll(".consent",{click:true})
@@ -59,15 +64,18 @@ export default {
 <style lang="less" scoped>
 @import '../../../../common/style/index.less';
 .consent{
-   padding-top: 90px;
+  .firstUl{
+    .margin(94,0,0,0)
+  }
+  .margin(44,0,0,0);
     ul{
         display: flex;
-       
+
     .logo{
         .w(60);
         .h(60);
         display: inline-block;
-      
+
         .margin(20,0,0,20);
         img{
             .w(60);
@@ -84,7 +92,7 @@ export default {
         .margin(24,0,0,16);
         .w(84);
         .h(23);
-        
+
     }
     .p1{
        display: inline;
@@ -93,10 +101,10 @@ export default {
         .margin(4,0,0,16);
        .w(86);
        .h(23);
-        
+
     }
-        } 
-    
+        }
+
     }
     div{
         span{
@@ -106,7 +114,7 @@ export default {
         .margin(29,0,0,21);
         .w(335);
         .h(52);
-        
+
     }
     }
     .a1{
@@ -133,7 +141,7 @@ export default {
         }
     }
     .p2{
-      
+
       text-align: center;
       font-size: 12px;
       color:black;
@@ -149,7 +157,7 @@ export default {
         font-size: 12px;
         display: block;
         .margin(6,0,0,23);
-        
+
     }
     input{
         .w(330);

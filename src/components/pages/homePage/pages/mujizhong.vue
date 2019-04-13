@@ -1,6 +1,7 @@
 <template>
     <div class="consent">
-       <ul>
+      <Tab></Tab>
+       <ul class="firstUl">
       <div class="logo">
          <img src="../../../../../static/img/logo-01.png" alt="">
       </div>
@@ -19,7 +20,7 @@
         <b>兑换</b>
          <input type="text"   placeholder="暂无优惠" v-model="aaa">
          <ul class="ul">
-             <li :class="activeindex==index?'active':'li'"  v-for="(item,index) in list" :key="index" :val="item" @click="click(index)" 
+             <li :class="activeindex==index?'active':'li'"  v-for="(item,index) in list" :key="index" :val="item" @click="click(index)"
               ref="li">{{item}}%</li>
               <!-- <li class="li" @click="click">50%</li>
                <li class="li" @click="click">75%</li>
@@ -36,6 +37,7 @@
     </div>
 </template>
 <script>
+  import Tab from '@/components/common/tab/tab.vue'
 import BScroll from 'better-scroll'
 export default {
     data(){
@@ -46,12 +48,15 @@ export default {
             bbb:"",
         }
     },
+  components:{
+      Tab
+  },
      methods:{
       scroll(){
          new BScroll(".consent",{click:true})
       },
       chongzhi(){
-        
+
           this.$router.push({name:"test"})
       },
       duihuan(){
@@ -74,7 +79,7 @@ export default {
             this.bbb = this.aaa*this.$refs.li[this.activeindex].getAttribute("val")/100
 
       },
-      
+
 
   }
 }
@@ -82,16 +87,17 @@ export default {
 <style lang="less" scoped>
 @import '../../../../common/style/index.less';
 .consent{
-       
-        padding-top:90px;
+  .firstUl{
+    .margin(94,0,0,0);
+  }
     ul{
         display: flex;
-     
+
     .logo{
         .w(60);
         .h(60);
         display: inline-block;
-        
+
         .margin(20,0,0,20);
         img{
         .w(60);
@@ -108,7 +114,7 @@ export default {
         .margin(24,0,0,16);
         .w(84);
         .h(23);
-        
+
     }
     .p1{
        display: inline;
@@ -117,10 +123,10 @@ export default {
         .margin(4,0,0,16);
        .w(86);
        .h(23);
-        
+
     }
-        } 
-    
+        }
+
     }
     div{
         span{
@@ -130,7 +136,7 @@ export default {
         .margin(29,0,0,21);
         .w(335);
         .h(52);
-        
+
     }
     }
     .a1{
@@ -157,7 +163,7 @@ export default {
         }
     }
     .p2{
-      
+
       text-align: center;
       font-size: 12px;
       color:black;
@@ -173,7 +179,7 @@ export default {
         font-size: 12px;
         display: block;
         .margin(6,0,0,23)
-        
+
     }
     input{
         .w(330);
@@ -181,7 +187,7 @@ export default {
         .margin(4,0,0,22);
         background-color: rgb(235, 235, 228);
         border: none;
-        
+
     }
     .ul{
         display: flex;
@@ -193,10 +199,10 @@ export default {
             border:1px solid #cccccc;
              text-align: center;
              line-height: 28px;
-          
+
         }
     }
-  
+
     .but1{
         .w(95);
         .h(34);
@@ -231,7 +237,7 @@ export default {
         border:1px solid #cccccc;
         text-align: center;
              line-height: 28px;
-       
+
     }
 </style>
 

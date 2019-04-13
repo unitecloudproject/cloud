@@ -3,10 +3,10 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide" v-for='(item,index) in list' :key='index'>
                 <!-- <img :src="item.picUrl" alt=""> -->
-               
-               
+
+
                <img :src='item'  alt="">
-                
+
             </div>
         </div>
     </div>
@@ -19,13 +19,13 @@ import img3 from "../../../../static/img/3.jpg";
 // import  ApiConfig from '../../../common/api/apiconfig.js'
 export default {
     data(){
-        
+
             return {
                 list:[
                     img1,
                     img2,
                     img3
-                   
+
                 ]
             }
        },
@@ -49,7 +49,7 @@ export default {
     //          })
     //     }
    },
-   
+
 //    created(){
 //      this.initdata()
 //    },
@@ -64,7 +64,7 @@ export default {
 @import '../../../common/style/index.less';
 @import'../../../../node_modules/swiper/dist/css/swiper.min.css';
 .swiper-container{
-        .margin(90,0,0,0);
+        /*.margin(90,0,0,0);*/
         .w(375);
         .h(125);
         img{

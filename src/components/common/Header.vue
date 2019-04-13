@@ -19,6 +19,9 @@
 <style scoped lang="less">
 @import "~commom/style/index.less";
   .header{
+    z-index: 200;
+    position: fixed;
+    top: 0;
     .padding(0,10,0,10);
     .w(355);
     .h(44);

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header></Header>
-    <router-view></router-view>
+    <router-view class="body"></router-view>
   </div>
 </template>
 
@@ -13,7 +13,6 @@
   import Safety from '../src/components/pages/login/safety.vue';
   import ResetPs from '../src/components/pages/login/resetPs.vue';
   import Header from '../src/components/common/Header.vue'
-  import HomePage from './components/pages/homePage/homePage.vue'
 export default {
   name: 'App',
   components:{
@@ -29,7 +28,8 @@ export default {
 
 
 
-<style>
+<style lang="less" scoped>
+  @import "common/style/index";
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -37,5 +37,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   background:#fff;
+}
+.body{
+  .margin(44,0,0,0)
 }
 </style>
