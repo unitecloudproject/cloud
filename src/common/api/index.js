@@ -16,7 +16,7 @@ const api = {
     return new Promise((reslove, reject) => {
       axios.post(baseUrl + url,params)
         .then(data => {
-          resolve(data.data)
+          reslove(data.data)
         }).catch(err => {
         reject(err)
       })

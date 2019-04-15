@@ -41,6 +41,7 @@
     </div>
 </template>
 <script>
+  import api from '@/common/api'
   import { Toast } from 'mint-ui'
     export default {
       data(){
@@ -56,13 +57,13 @@
       },
       methods:{
         sendCode(){
-          this.$axios.get('/api/user/checkcode/',{params:{username:this.phone}})
+          api.requestGet('/user/checkcode/',{params:{username:this.phone}})
             .then((data)=>{
               console.log(data)
             })
         },
         checkUserName(){
-          this.$axios.get('/api/user/checkuser/',{username:this.phone})
+          api.requestGet('/user/checkuser/',{username:this.phone})
             .then((data)=>{
             console.log(data)
               if(data.status==400){
@@ -83,7 +84,7 @@
           data.append("code",this.code);
           data.append("first_name",this.ming);
           data.append("last_name",this.xing);
-          this.$axios.post("/api/user/register/",data)
+          api.requestPost("/user/register/",data)
             .then((data)=>{
               console.log(data)
             })

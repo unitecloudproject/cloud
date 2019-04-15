@@ -38,6 +38,7 @@
         api.requestPost("/user/login/",data)
           .then(data =>{
             console.log(data)
+            this.$router.push('/quanbu')
           })
       }
     }

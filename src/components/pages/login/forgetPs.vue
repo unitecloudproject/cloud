@@ -8,6 +8,7 @@
 </template>
 <script>
   const Qs = require('qs')
+  import api from '@/common/api'
     export default {
       data(){
         return{
@@ -19,7 +20,7 @@
           let data = new FormData();
           data.append("username",this.phone);*/
 //          this.$router.push('/safety');
-          this.$axios.post("/api/user/forgetpassword/",Qs.stringify({username:this.phone}))
+          api.requestPost("/user/forgetpassword/",Qs.stringify({username:this.phone}))
             .then((data)=>{
               if(data.data.status==200){
                 this.$router.push({name:'safety',params:{data}})
