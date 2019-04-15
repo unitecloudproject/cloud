@@ -2,9 +2,9 @@ import baseUrl from './base'
 import axios from 'axios'
 
 const api = {
-  requestGet (url) {
+  requestGet (url,params) {
     return new Promise((resolve, reject) => {
-      axios.get(baseUrl + url)
+      axios.get(baseUrl + url,params)
         .then(data => {
           resolve(data.data)
         }).catch(err => {
@@ -12,9 +12,9 @@ const api = {
       })
     })
   },
-  requestPost (url) {
+  requestPost (url,params) {
     return new Promise((reslove, reject) => {
-      axios.post(baseUrl + url)
+      axios.post(baseUrl + url,params)
         .then(data => {
           resolve(data.data)
         }).catch(err => {

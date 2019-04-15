@@ -7,6 +7,7 @@
     </div>
 </template>
 <script>
+  const Qs = require('qs')
     export default {
       data(){
         return{
@@ -14,14 +15,15 @@
         }
       },
       methods:{
-        cont(){
+        cont(){/*
           let data = new FormData();
-          data.append("username",this.phone);
-          console.log(data[0])
+          data.append("username",this.phone);*/
 //          this.$router.push('/safety');
-          this.$axios.post("/api/user/forgetpassword/",{username:this.phone})
+          this.$axios.post("/api/user/forgetpassword/",Qs.stringify({username:this.phone}))
             .then((data)=>{
-              console.log(data)
+              if(data.data.status==200){
+                this.$router.push({name:'safety',params:{data}})
+              }
             })
         }
       }

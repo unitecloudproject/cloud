@@ -26,10 +26,10 @@
         </p>
         <a @click="goLogin">已有账号？</a>
       </div>
-      <div class="gray">
+      <!--<div class="gray">
 
-      </div>
-      <div class="mssg">
+      </div>-->
+     <!-- <div class="mssg">
         <i class="iconfont icon-chenggong"></i>
         <p>注册成功</p>
         <h3>只有身份认证通过我们团队审核后才可以进行认购</h3>
@@ -37,7 +37,7 @@
           <button @click="goHome">进入首页</button>
           <button @click="goId">身份认证</button>
         </div>
-      </div>
+      </div>-->
     </div>
 </template>
 <script>

@@ -4,7 +4,7 @@
       <input type="text" class="email" disabled v-model="mail">
       <br>
       <div class="codeBox">
-        <input type="text" class="ecode" placeholder="邮箱验证码"><button>获取验证码</button>
+        <input type="text" class="ecode" placeholder="邮箱验证码"><button @click="getCode">获取验证码</button>
       </div>
       <br>
       <input type="text" class="phone" disabled v-model="phone">
@@ -17,6 +17,7 @@
     </div>
 </template>
 <script>
+  import api from '@/common/api'
     export default {
       data(){
         return{
@@ -25,12 +26,23 @@
         }
       },
       methods:{
+        getCode(){
+          let reg = /@/g;
+          if(!reg.test(this.mail)){
+            api.requestGet('/user/phonecode/',{params:{phone:this.mail}})
+              .then(data =>{
+                console.log(data)
+              })
+          }
+        },
         goRePs(){
           this.$router.push('/resetps');
         }
       },
       mounted(){
-
+        console.log(this.$route.params.data.data.data)
+        let data=this.$route.params.data.data.data
+        this.mail=data.phonenum;
       }
     }
 </script>
